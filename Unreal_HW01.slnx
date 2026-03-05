@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Unreal_HW01/Unreal_HW01.vcxproj" Id="c7ea6d27-71ff-420c-9f49-96f8feee62cf" />
+</Solution>
