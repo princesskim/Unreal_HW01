@@ -1,20 +1,39 @@
-// Unreal_HW01.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
 
-int main()
-{
-    std::cout << "Hello World!\n";
+int main(void) {
+	int request = 0;
+	std::cout << "Give your Diamond Num : ";
+	std::cin >> request;
+
+	if (request <= 0) {
+		std::cout << "잘못된 입력입니다. 양의 정수를 입력하세요." << std::endl;
+		return 1;
+	}
+
+
+	for (int i = 1; i <= request; ++i) {
+		//(request-1)개 공백
+		//(2*i-1)개 별
+		for (int j = 0; j < (request - i); ++j) {
+			std::cout << " ";
+		}
+		for (int j = 0; j < (2 * i - 1); ++j) {
+			std::cout << "*";
+		}
+		std::cout << std::endl;
+	}
+
+	//위에 과정을 반대로 하면 되는데, i == request 인 행 하나만 제외
+	for (int i = request - 1; i >= 1; --i) {
+		//(request-1)개 공백
+		//(2*i-1)개 별
+		for (int j = 0; j < (request - i); ++j) {
+			std::cout << " ";
+		}
+		for (int j = 0; j < (2 * i - 1); ++j) {
+			std::cout << "*";
+		}
+		std::cout << std::endl;
+	}
+	return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
